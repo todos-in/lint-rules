@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-todohub",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Provides eslint rules for Todohub",
   "main": "index.js",
   "keywords": [

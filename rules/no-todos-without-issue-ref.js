@@ -33,7 +33,7 @@ module.exports = {
           let suggestion = undefined
           if (currentBranch.isFeatureBranch) {
             suggestion = [{
-              desc: `Reference the current branch's issue number (#${currentIssue}) in the TODO.`,
+              desc: `Reference the current branch's issue number (#${currentBranch.issueNumber}) in the TODO.`,
               fix: function (fixer) {
                 let replaceSuggestion = comment.value.replaceAll(todoWithoutIssueRefRegex, (_match, keyword, whitespace, _issue_ref, todo_txt) =>
                   `${keyword}${whitespace}#${currentBranch.issueNumber} ${todo_txt}`)
