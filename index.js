@@ -4,7 +4,7 @@
 module.exports = {
   meta: {
     name: 'eslint-plugin-todohub',
-    version: "0.1.3",
+    version: "0.1.5",
   },
   rules: {
     'no-todos-without-issue-ref': require('./rules/no-todos-without-issue-ref'),
