@@ -1,5 +1,5 @@
-// TODO add recommended rule config to export object
-// TODO use esm
+// TODO #4 add recommended rule config to export object
+// TODO #5 use esm
 
 module.exports = {
   meta: {

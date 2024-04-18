@@ -6,7 +6,7 @@ const gitPath = path.join('.', '.git', 'HEAD')
 
 let gitHEAD
 try {
-  // TODO search for git folder recursively in parents
+  // TODO #3 search for git folder recursively in parents
   gitHEAD = fs.readFileSync(gitPath, 'utf8')
 } catch (err) {
   console.debug('Not in a git folder. Cannot provide hints for TODOs referencing current feature-branch.')

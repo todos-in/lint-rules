@@ -18,7 +18,7 @@ module.exports = {
           for (const line of comment.value.split(EOL)) {
             const match = line.match(todoWithCurrentIssueRegex)
             if (match) {
-              // TODO get exact location of TODO match, not comment start / end line
+              // TODO #6 get exact location of TODO match, not comment start / end line
               context.report({
                 loc: {
                   start: {
