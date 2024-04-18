@@ -1,4 +1,6 @@
+const { EOL } = require('os')
 const git = require('../git')
+
 const currentBranch = git.getCurrentBranchInfo()
 
 const todoWithCurrentIssueRegex = new RegExp(`(?<keyword>TODO):?[^\S\r\n]+(?<numberGroup>\\(?#?(?<issueNumber>${currentBranch.issueNumber})\\)?)(?<todoText>.*)`, 'i')

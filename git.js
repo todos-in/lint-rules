@@ -1,6 +1,5 @@
 const fs = require('node:fs')
 const path = require('node:path')
-const { EOL } = require('os')
 
 const gitPath = path.join('.', '.git', 'HEAD')
 
