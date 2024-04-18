@@ -1,0 +1,12 @@
+{
+  "name": "eslint-plugin-todohub",
+  "version": "0.1.4",
+  "description": "Provides eslint rules for Todohub",
+  "main": "index.js",
+  "keywords": [
+    "eslint",
+    "todohub"
+  ],
+  "author": "nigeisel",
+  "license": "MIT"
+}
