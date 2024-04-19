@@ -1,4 +1,5 @@
 // TODO #5 use esm
+// TODO #1 add tests
 
 const metaInfo = require('./package.json')
 

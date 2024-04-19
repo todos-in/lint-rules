@@ -1,7 +1,5 @@
 name: Todohub Workflow
-on:
-  push:
-  pull_request:
+on: [push, pull_request]
 
 permissions:
   contents: read
@@ -10,10 +8,8 @@ permissions:
 
 jobs:
   todohub-job:
-    name: Todohub
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run Todohub
-        id: test-action
+      - name: Todohub
+        id: todohub
         uses: todos-in/todohub@main
