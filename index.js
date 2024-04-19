@@ -1,13 +1,22 @@
-// TODO #4 add recommended rule config to export object
 // TODO #5 use esm
+
+const metaInfo = require('./package.json')
 
 module.exports = {
   meta: {
-    name: 'eslint-plugin-todohub',
-    version: "0.1.6",
+    name: metaInfo.name,
+    version: metaInfo.version,
   },
   rules: {
     'no-todos-without-issue-ref': require('./rules/no-todos-without-issue-ref'),
     'current-feature-branch-issues':  require('./rules/current-feature-branch-issues'),  
-  }
+  },
+  configs: {
+    recommended: {
+      rules: {
+        'todohub/no-todos-without-issue-ref': 'error',
+        'todohub/current-feature-branch-issues': 'warn',
+      },
+    },
+  },
 }

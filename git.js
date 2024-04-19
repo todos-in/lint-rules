@@ -11,8 +11,8 @@ try {
   console.debug('Not in a git folder. Cannot provide hints for TODOs referencing current feature-branch.')
 }
 
-const issueNumber = Number.parseInt(gitHEAD.split('/').pop()?.split('-')[0])
-const isFeatureBranch = !Number.isNaN(issueNumber)
+const issueNumber = gitHEAD && Number.parseInt(gitHEAD.split('/').pop()?.split('-')[0])
+const isFeatureBranch = gitHEAD !== undefined && !Number.isNaN(issueNumber)
 
 module.exports = {
   getCurrentBranchInfo: () => ({ issueNumber, isFeatureBranch })

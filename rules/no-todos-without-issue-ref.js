@@ -55,7 +55,7 @@ module.exports = {
 
           context.report({
             loc: comment.loc,
-            message: `TODOs must reference an issue, such as: "${firstTodoWithoutIssueRefMatch.groups['keyword']} #${currentBranch.isFeatureBranch ? currentBranch.issueNumber : '15'} ${todoTxtShortened}"`,
+            message: `TODOs must reference an issue, such as: "${firstTodoWithoutIssueRefMatch.groups['keyword']} #${currentBranch.isFeatureBranch ? currentBranch.issueNumber : '42'} ${todoTxtShortened}"`,
             suggest: suggestion
           })
         })
