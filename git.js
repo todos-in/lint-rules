@@ -5,16 +5,15 @@ function findClosestGitFolder(directory) {
   let currentDir = directory;
   let parentDir = path.dirname(currentDir);
 
-  // currentDir and parentDir are equal when root folder of system is reached
   do {
     const gitFolderPath = path.join(currentDir, '.git');
-
     if (fs.existsSync(gitFolderPath)) {
       return gitFolderPath;
     }
-
-    currentDir = path.dirname(parentDir);
+    currentDir = parentDir;
     parentDir = path.dirname(currentDir);
+
+    // currentDir and parentDir are equal when root folder of system is reached
   } while (currentDir !== parentDir)
 
   return null;
