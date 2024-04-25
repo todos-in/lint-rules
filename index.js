@@ -10,7 +10,7 @@ module.exports = {
   },
   rules: {
     'no-todos-without-issue-ref': require('./rules/no-todos-without-issue-ref'),
-    'current-feature-branch-issues':  require('./rules/current-feature-branch-issues'),  
+    'current-feature-branch-issues': require('./rules/current-feature-branch-issues'),
   },
   configs: {
     recommended: {

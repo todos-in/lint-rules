@@ -1,15 +1,14 @@
 const { EOL } = require('os')
 const git = require('../git')
 
-const currentBranch = git.getCurrentBranchInfo()
-
-const todoWithCurrentIssueRegex = new RegExp(`(?<keyword>TODO):?[^\S\r\n]+(?<numberGroup>\\(?#?(?<issueNumber>${currentBranch.issueNumber})\\)?)(?<todoText>.*)`, 'i')
-
 module.exports = {
   meta: {
     type: 'suggestion',
   },
   create: function (context) {
+    const currentBranch = git.getCurrentBranchInfo()
+    const todoWithCurrentIssueRegex = new RegExp(`(?<keyword>TODO):?[^\S\r\n]+(?<numberGroup>\\(?#?(?<issueNumber>${currentBranch.issueNumber})\\)?)(?<todoText>.*)`, 'i')
+
     return {
       Program() {
         if (!currentBranch.isFeatureBranch) {

@@ -1,12 +1,20 @@
 {
   "name": "eslint-plugin-todohub",
-  "version": "0.1.8",
+  "version": "0.2.3",
   "description": "Provides eslint rules for Todohub",
   "main": "index.js",
   "keywords": [
     "eslint",
+    "eslintplugin",
+    "eslint-plugin",
     "todohub"
   ],
+  "scripts": {
+    "publish": "npm publish"
+  },
   "author": "nigeisel",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  }
 }
